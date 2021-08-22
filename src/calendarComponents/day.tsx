@@ -52,10 +52,11 @@ const timeArray = (array: any): TimeArray => {
 			getData.map((data:CalenderArray) => {
 				if(format(arr.fullFormat,"PP") === format(data.date, "PP") ){
 					// @ts-ignore
-					time[data.duration][`row${idx}`] = data.title;
+					time[data.duration - 1][`row${idx}`] = data.title;
 				}
 			});
 		});
+
 		setTime([...time]);
 	},[array]);
 

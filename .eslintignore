@@ -26,7 +26,9 @@ tsconfig.json
 node_modules
 .github
 .vscode
-cypress/**
+cypress/fixtures
+cypress/reports
+cypress/screenshots
 package.*.json
 # Project specific directories to ignore
 /internals/**

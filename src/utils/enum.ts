@@ -23,6 +23,6 @@ export declare type TimeArray = {
 export declare type CalenderArray = {
     id: number;
     title: string;
-    date: any;
+    date: Date;
     duration: number;
 }
