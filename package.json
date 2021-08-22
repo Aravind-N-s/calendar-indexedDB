@@ -23,6 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "type": "tsc --noEmit",
     "cy:run": "cypress run --config baseUrl=http://localhost:3000",
     "cy:open": "cypress open --config baseUrl=http://localhost:3000",
     "clean:reports": "rm -R -f cypress/reports cypress/screenshots cypress/videos && mkdir -p cypress/reports/mochareports",
@@ -52,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run type && lint-staged"
     }
   },
   "lint-staged": {
