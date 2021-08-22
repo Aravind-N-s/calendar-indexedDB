@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from "react";
 import "./App.css";
-import {AppBar} from "@material-ui/core";
+import {AppBar, Box} from "@material-ui/core";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
+import Calendar from "./calendarComponents";
+import {keys} from "./indexedDB/index";
 import {dateArray, timeArray} from "./utils/day";
 
 const App = (): JSX.Element => {
@@ -21,14 +23,16 @@ const App = (): JSX.Element => {
 			alert("This browser doesn't support IndexedDB");
 			return;
 		}
+		keys().catch(err => {alert(err);});
 	},[]);
 
 	return (
 		<div className="App">
 			<AppBar position="static">
-				<Toolbar>
-					<Typography align="right" variant="h6">{month}</Typography>
-				</Toolbar>
+				<Box component={Toolbar} justifyContent={"space-between"}>
+					<Typography variant="h6">Calendar</Typography>
+					<Typography variant="h6">{month}</Typography>
+				</Box>
 			</AppBar>
 			<div style={{textAlign: "right",margin: "20px 50px 0px 0px"}}>
 				<ButtonGroup  variant="text" color="primary" aria-label="text primary button group">
@@ -36,7 +40,7 @@ const App = (): JSX.Element => {
 					<Button onClick={() => onClickHandler(1)}>Next Week</Button>
 				</ButtonGroup>
 			</div>
-			<h2>Test</h2>
+			<Calendar columns={array} rows={time}/>
 		</div>
 	);
 };
