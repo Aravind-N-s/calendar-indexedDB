@@ -9,5 +9,20 @@ export declare type DateArray = {
 }[];
 
 export declare type TimeArray = {
+    index: number
     value: string;
+    row1: string;
+    row2: string;
+    row3: string;
+    row4: string;
+    row5: string;
+    row6: string;
+    row7: string;
 }[];
+
+export declare type CalenderArray = {
+    id: number;
+    title: string;
+    date: any;
+    duration: number;
+}

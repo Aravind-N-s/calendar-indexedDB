@@ -10,7 +10,6 @@ import Paper from "@material-ui/core/Paper";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import {DateArray, TimeArray} from "../utils/enum";
-import CircularProgress from "@material-ui/core/CircularProgress";
 
 const useStyles = makeStyles({
 	table: {
@@ -43,12 +42,13 @@ const Calendar = (props: { columns: DateArray; rows: TimeArray; }): JSX.Element 
 										<TableCell align="center" component="th" scope="row">
 											{row.value}
 										</TableCell>
-										{/*<TableCell align="right">{row.calories}a</TableCell>*/}
-										{/*<TableCell align="right">{row.fat}b</TableCell>*/}
-										{/*<TableCell align="right">{row.carbs}c</TableCell>*/}
-										{/*<TableCell align="right">{row.protein}d</TableCell>*/}
-										{/*<TableCell align="right">{row.protein}e</TableCell>*/}
-										{/*<TableCell align="right">{row.protein}f</TableCell>*/}
+										<TableCell >{row.row1}</TableCell>
+										<TableCell >{row.row2}</TableCell>
+										<TableCell >{row.row3}</TableCell>
+										<TableCell >{row.row4}</TableCell>
+										<TableCell >{row.row5}</TableCell>
+										<TableCell >{row.row6}</TableCell>
+										<TableCell >{row.row7}</TableCell>
 									</TableRow>
 								))}
 							</TableBody>

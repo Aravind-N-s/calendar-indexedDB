@@ -6,8 +6,8 @@ import Typography from "@material-ui/core/Typography";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
 import Calendar from "./calendarComponents";
-import {keys} from "./indexedDB/index";
-import {dateArray, timeArray} from "./utils/day";
+import {keys} from "./indexedDB";
+import {dateArray, timeArray} from "./calendarComponents/day";
 
 const App = (): JSX.Element => {
 

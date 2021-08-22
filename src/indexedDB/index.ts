@@ -9,7 +9,7 @@ interface CalendarDB extends DBSchema {
 	calendar: {
 		id: number;
 		title: string;
-		date: string;
+		date: any;
 		duration: number;
 		indexes: { 'by-date': string };
 	};
@@ -26,11 +26,11 @@ const dbPromise = openDB<CalendarDB>('Calender', 1, {
 	try{
 		const resp = await (await dbPromise).getAll("calendar")
 		if(resp.length) return;
-		for (let i = 0; i < 10; i++) {
+		for (let i = 0; i < 23; i++) {
 			const data = {
 				title: faker.commerce.productName(),
-				date: addDays(currentDate, random),
-				duration: i * Math.ceil(Math.random() * duration[i]),
+				date: addDays(currentDate, Math.ceil(Math.random() * duration[i])),
+				duration: Math.ceil(Math.random() * duration[i]),
 			};
 			await (await dbPromise).add('calendar', data)
 		}
