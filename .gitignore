@@ -128,3 +128,6 @@ yarn-error.log*
 
 .idea
 .vscode
+
+cypress/reports
+cypress/screenshots

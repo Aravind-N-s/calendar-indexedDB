@@ -1,0 +1,19 @@
+{
+  "chromeWebSecurity": false,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "charts": true
+  },
+  "video": false,
+  "viewportWidth": 1330,
+  "viewportHeight": 720,
+  "defaultCommandTimeout": 5000,
+  "requestTimeout": 5000,
+  "watchForFileChanges": true,
+  "trashAssetsBeforeRuns": true,
+  "testFiles": ["index.js"]
+}
