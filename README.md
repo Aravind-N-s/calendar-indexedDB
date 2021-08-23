@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+# Calendar 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Project Statement
 
-## Available Scripts
+- Implement a "Google Calendar" week view (7 days), using Material UI with indexedDB as its database.
 
-In the project directory, you can run:
+#### Pre-Requisites
 
-### `npm start`
+##### Ignore if Environment is already set up
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Download and Install [NodeJS](https://nodejs.org/en/)
+Install the package manager [npm](http://npmjs.com/).
+Use the package manager [npm](http://npmjs.com/) to install ReactJS.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Run the following commands to check for successful installation
+```npm
+node --version
+npm --version
+```
 
-### `npm test`
+#### Initial Set-up
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Use the package manager [npm](http://npmjs.com/) to install node packages required. Navigating to the project folder run the following command. 
 
-### `npm run build`
+```npm
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application will take a while to install all the dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##### Running the Project
+In the Project folder run the following command 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```npm
+npm start
+```
 
-### `npm run eject`
+The application should automatically open itself in the browser on http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Running Test Cases
+##### Prerequisite for cypress - Must be running the application - [Please refer the Running the Project section](#####Running the Project)
+###### Running in Headed Mode
+In headed mode the user can watch the test case interact with application \
+In the Project folder run the following command watch the test cases run.
+```npm
+npm run cy:open
+```
+The above will open a window, please select the index.js file to watch the test cases run.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###### Running in Headless Mode
+In headless mode the user cannot watch the test case interact with application \
+It will only run the test cases in the terminal \
+In the Project folder run the following command watch the test cases run.
+```npm
+npm run cy:run
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+###### Running the report
+Following the Prerequisite being complete run the following command.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```npm
+npm run e2e:report
+```
+ The link of the report is made available on the terminal.\
+Please navigate to the path to see the complete report
 
-## Learn More
+#### Issues
+Not tested in Windows.\
+Needs to wait for a while to let seeding of indexedDB.\
+Couldn't test the availability of data in test cases.\
+Needs to have a blank indexedDB during test cases.
+# License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[MIT](https://choosealicense.com/licenses/mit/)
