@@ -15,6 +15,7 @@ interface CalendarDB extends DBSchema {
 	};
 }
 
+// Initializing the calendar DB.
 const dbPromise = openDB<CalendarDB>('Calender', 1, {
 	upgrade(db) {
 		const calendarStore = db.createObjectStore('calendar', {keyPath: "id", autoIncrement: true,});
@@ -23,6 +24,7 @@ const dbPromise = openDB<CalendarDB>('Calender', 1, {
 });
 
 (async () => {
+	// seeding the DB with 23 records.
 	try{
 		const resp = await (await dbPromise).getAll("calendar")
 		if(resp.length) return;
@@ -40,26 +42,12 @@ const dbPromise = openDB<CalendarDB>('Calender', 1, {
 	}
 })();
 
-export async function get(key:string) {
-	return (await dbPromise).get("calendar", key);
-}
-
+// get all the records to populate on calendar
 export async function getAll() {
 	return (await dbPromise).getAll("calendar");
 }
 
-export async function set(key:string, val:string) {
-	return (await dbPromise).put("calendar", val, key);
-}
-
-export async function del(key:string) {
-	return (await dbPromise).delete("calendar", key);
-}
-
-export async function clear() {
-	return (await dbPromise).clear("calendar");
-}
-
+// get all keys - used to initialize db and check for errors
 export async function keys() {
 	return (await dbPromise).getAllKeys("calendar");
 }

@@ -38,7 +38,7 @@ npm start
 The application should automatically open itself in the browser on http://localhost:3000
 
 #### Running Test Cases
-##### Prerequisite for cypress - Must be running the application - [Please refer the Running the Project section](#####Running the Project)
+##### Prerequisite for cypress - Must be running the application - Please refer the Running the Project section
 ###### Running in Headed Mode
 In headed mode the user can watch the test case interact with application \
 In the Project folder run the following command watch the test cases run.
