@@ -69,6 +69,11 @@ Not tested in Windows.\
 Needs to wait for a while to let seeding of indexedDB.\
 Couldn't test the availability of data in test cases.\
 Needs to have a blank indexedDB during test cases.
+
+#### Demo Link
+
+Please find the project hosted at https://calender-index.netlify.app/
+
 # License
 
 [MIT](https://choosealicense.com/licenses/mit/)
